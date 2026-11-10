@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #071B32;
+  background: #ffffff;
+}
+
+::selection {
+  background: #F21F2B;
+  color: #ffffff;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #F21F2B;
+  outline-offset: 2px;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Blueprint grid texture for dark navy bands */
+.bg-blueprint {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.bg-blueprint-light {
+  background-image:
+    linear-gradient(rgba(7, 27, 50, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(7, 27, 50, 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.mask-line {
+  display: block;
+  overflow: hidden;
+}
+
+/* Main nav pills — painted on an inner span so platform overlay wrappers
+   can never stretch the coloured background */
+.nav-link {
+  display: flex;
+  align-items: center;
+}
+
+.nav-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 2px;
+  font-family: "Cabinet Grotesk", ui-sans-serif, system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.85);
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.nav-link:hover .nav-pill {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active .nav-pill {
+  color: #ffffff;
+  background-color: #f21f2b;
+}
+
+.mask-line > span {
+  display: block;
+  will-change: transform;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.font-hindi {
+  font-family: "IBM Plex Sans Devanagari", "IBM Plex Sans", ui-sans-serif, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .marquee-track {
+    animation: none !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect x="3" y="3" width="58" height="58" rx="16" fill="#071B32"/>
+  <rect x="6.5" y="6.5" width="51" height="51" rx="13" fill="none" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="1.5"/>
+  <text x="32" y="41.5" text-anchor="middle" font-family="'Cabinet Grotesk','IBM Plex Sans',system-ui,sans-serif" font-size="28" font-weight="800" letter-spacing="-2" fill="#FFFFFF">SG</text>
+  <rect x="20" y="47.2" width="24" height="2.8" rx="1.4" fill="#F21F2B"/>
+</svg>
